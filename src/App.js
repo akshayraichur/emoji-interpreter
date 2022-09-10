@@ -97,10 +97,6 @@ function App() {
   const [error, setError] = useState('');
 
   const handleInputChange = (event) => {
-    // resetting the state value
-    setResult({ name: '', meaning: '' });
-    setError('');
-
     let input = event.target.value;
     setUserInput(input);
 
@@ -149,7 +145,7 @@ function App() {
       <div className='emoji-container'>
         {Object.keys(emojiDatabase).map((emoji) => (
           <span
-            style={{ fontSize: '1.4rem', padding: '0.5rem', cursor: 'pointer' }}
+            style={{ fontSize: '2.5rem', padding: '0.5rem', cursor: 'pointer' }}
             key={emoji}
             onClick={() => getEmojiInfo(emoji)}
           >
